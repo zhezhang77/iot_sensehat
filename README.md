@@ -1,7 +1,7 @@
 # iot_sensehat
- **IoT sense hat example**
+**IoT sense hat example**
 
-# Command
+# Program
 * iot_pub_sensehat.py  
   + Publish temperature and humidity data to AWS broker.  
   + **Topic:** iot/temperature, iot/humidity  
