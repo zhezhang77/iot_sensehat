@@ -25,3 +25,6 @@
 <tr><td> Server </td><td> a1zd8y5etgd1ze.iot.ap-northeast-1.amazonaws.com  </td></tr>
 <tr><td> Port </td><td> 8883 </td></tr>
 </table></html>
+
+# MQTT.fx Settings
+![MQTT.fx Settings](https://github.com/zhezhang77/iot_sensehat/blob/master/mqttfx_setting.PNG)
