@@ -13,7 +13,6 @@ temperature = "0"
 humidity = "0"
 
 sense = SenseHat()
-sense.set_rotation(180)
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -42,6 +41,18 @@ def on_log(client, userdata, level, buf):
 
 def display_info():
 	while True:
+		x, y, z = sense.get_accelerometer_raw().values()
+		x = round(x, 0)
+		y = round(y, 0)
+		if x == -1:
+			sense.set_rotation(180)
+		elif y == -1:
+			sense.set_rotation(90)
+		elif y == 1:
+			sense.set_rotation(270)
+		else:
+			sense.set_rotation(0)
+
 		if disp_type == 0:
 			sense.show_message("T:"+temperature, text_colour=[255, 0, 0])
 		elif disp_type == 1:
